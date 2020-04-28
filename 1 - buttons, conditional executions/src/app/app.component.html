@@ -1,0 +1,47 @@
+<h3>Angular kurs</h3>
+
+<div>
+  <input [value]='tekst1'>
+</div>
+
+<div>
+  <input >
+  {{tekst2}}
+</div>
+
+<div>
+  <input (click)="click($event)">
+  <button [disabled]="przycisk" style = "background-color: rgb(205, 51, 51); color: white; border-color: rgb(205, 51, 51);  font-size: 6mm">Dodaj <span class = "fa fa-home" style="font-size: 50px; color: white"></span> </button>
+  {{pokazClick}}
+</div>
+
+<p> ________________________________</p>
+
+<h3 [className]="color_Class"> Angular kurs0</h3>
+<img [src]="logo_url">
+<input [maxLength]='max_length' [value]="input_text">
+
+<button  (click)="change()">Dodaj</button>
+
+<p> ________________________________</p>
+<h3 [className]="color_class1"> Angular kurs1</h3>
+
+<input [disabled]="is_disable1" (focus)="on_focus1()">
+<br>
+<input [disabled]="is_disable1" (click)="on_click1($event)">
+<br>
+<input [disabled]="is_disable1" (mousemove)="on_mouse_move1($event)">
+<br>
+<input [disabled]="is_disable1" (paste)='on_paste1()'> {{input_text1}}
+<br>
+<button (click)='change1()'>Zmiana</button>
+<p> ________________________________</p>
+<button (click)='moj()'>{{nazwa_moj}}</button>
+<p> ________________________________</p>
+
+<span class = "fa fa-home" style="font-size: 50px; color: brown"></span>
+<span class = "fa fa-history" style="font-size: 50px"></span>
+<span class = "fa fa-golbe" style="font-size: 50px"></span>
+<span class = "fa fa-play-circle" style="font-size: 50px"></span>
+
+
