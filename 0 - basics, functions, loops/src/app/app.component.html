@@ -1,0 +1,123 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h3>
+  Witamy w kursie {{title | uppercase}}<br>
+  Dzisiaj jest {{date | date: 'dd-MM-yy'}}<br>
+
+  Mój pies to: {{dog?.name}}. <br>
+  Ma {{dog && dog.age}} lat. <br>
+
+  {{showDog() | lowercase}}<br>
+
+  Dzialania na liczbach:<br>
+  {{5+3}}<br>
+  PI: {{pi |  number :'1.1-6' }}<br>
+</h3>
+
+<p> Dni tygodnia </p>
+<ul>
+  <li *ngFor="let day of days">
+    {{day}}
+  </li>
+</ul>
+
+
+<p> Psy </p>
+<div *ngFor='let dog of dogs; let i = index'>
+  {{i + 1}} Mój pies ma na imię {{dog.name}} i ma {{dog.age}} lata
+</div>
+
+
+
+<p> Dni tygodnia 2 </p>
+<div *ngIf="days.length >0">
+  <ul>
+    <p *ngFor="let day of days; let e = even">
+      <li *ngIf='e'>
+        {{day}}
+      </li>
+    </p>
+  </ul>
+</div>
+
+
+
+<p> Psy starsze niż 3 lata </p>
+<div *ngFor='let dog of dogs'>
+  <div *ngIf='dog.age>2'>
+    Mój pies ma na imię {{dog.name}} i ma {{dog.age}} lata
+  </div>
+</div>
+
+
+
+
+
+<p> Dni tygodnia 3 </p>
+
+<ng-container *ngIf="days.length >0">
+  <ul>
+    <ng-container *ngFor="let day of days; let e = even">
+      <li *ngIf='e'>
+        {{day}}
+      </li>
+    </ng-container>
+  </ul>
+</ng-container>
+
+
+<p> Psy1 </p>
+<ng-container *ngIf='dogs.length>0 ;then areDogs ; else noDogs'>
+</ng-container>
+
+<ng-template #areDogs>
+  <div *ngFor='let dog of dogs'>
+    Mój pies ma na imię {{dog.name}} i ma {{dog.age}} lata
+  </div>
+</ng-template>
+
+<ng-template #noDogs>
+  <p>Piesków nie ma :(</p>
+</ng-template>
+
+
+<p> Dni tygodnia </p>
+
+
+<div *ngFor="let day of days">
+  <div [ngSwitch]="day">
+    <div *ngSwitchCase="'pon'"> Montag</div>
+    <div *ngSwitchCase="'wt'"> Dienstag</div>
+    <div *ngSwitchCase="'sr'"> Mittwoch</div>
+    <div *ngSwitchCase="'czw'">Donnerstag </div>
+    <div *ngSwitchDefault> Freitag</div>
+  </div>
+</div>
+
+
+<br>
+<br>
+
+
+
+<div> Dni tygodnia - użycie ngIf </div>
+
+<ng-container *ngIf="isTrue">
+  <ng-container *ngFor="let day of days">
+    <li>{{day}}</li>
+  </ng-container>
+</ng-container>
+<button (click) = "show()">NgIF</button>
+
+
+
+<div> Dni tygodnia - użycie Hidden </div>
+
+<div [hidden]="isFalse">
+  <ng-container *ngFor="let day of days">
+    <li>{{day}}</li>
+  </ng-container>
+</div>
+<button (click) = "hidden()">Hidden</button>
+
+
+
