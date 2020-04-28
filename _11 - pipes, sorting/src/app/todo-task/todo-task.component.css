@@ -1,0 +1,12 @@
+li {
+    background: lightskyblue;
+    margin: 5px;
+}
+.nieparz-li{
+    background: lightcyan;
+    margin: 5px;
+}
+.last-li{
+    background: red;
+    margin: 5px;
+}
