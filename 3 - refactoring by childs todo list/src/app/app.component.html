@@ -1,0 +1,12 @@
+<h1 class="container">ZADANIA</h1>
+
+<div class="container">
+  <app-add-task (emitTask)="add($event)"></app-add-task>
+  <!-- po przechwyceniu eventu, czyli emitowanego, nowego zadania włącz funkcje add -->
+</div>
+
+<div class="container">
+  <app-todo-task [tasksList]="tasksList" (emitRemove)="remove($event)" (emitDone)="done($event)"></app-todo-task>
+
+  <app-done-task [doneList]="doneList"> </app-done-task>
+</div>
