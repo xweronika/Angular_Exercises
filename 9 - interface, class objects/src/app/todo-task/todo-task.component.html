@@ -1,0 +1,17 @@
+<ng-container *ngIf="tasksList.length > 0; else noTask">
+    <p [ngStyle]="{color: zmienKolor()}">Zadania do wykonania: {{tasksList.length}}</p>
+    <!--<p [ngStyle] ="{color: 'red'}>-->
+    <ul>
+        <li *ngFor="let task of tasksList; let nieparz = odd" 
+        [ngClass]= "{'nieparz-li ': nieparz === true, 'last-li':tasksList.length===1 }"> 
+            <!-- odd - nieparzystle, lec po nieparz, jesli jest nieparzysty to true, mozemy bez true wtedy tez zadziala: : odd} -->
+            <h5>{{task.name}}
+                <button type="button" class="btn btn-danger" (click)="remove(task)">Usuń</button>
+                <button type="button" class="btn btn-success" (click)="done(task)" >Zrobione</button>
+            </h5>
+        </li>
+    </ul>
+</ng-container>
+<ng-template #noTask>
+    <p>Brak zadań, masz czas wolny!</p>
+</ng-template>
