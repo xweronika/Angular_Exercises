@@ -1,0 +1,64 @@
+<!-- zapisywanie i aktualizowanie inputów  -->
+
+<p>Ten pracownik to {{proffesion}}, a jego umiejętności to {{skill}}.</p>
+
+<label> Zawód </label>
+<input [value]="proffesion" (input)="saveP($event)">
+<br> <br>
+<label> Umiejętności </label>
+<input [value]="skill" (input)="saveS($event)">
+
+<p>Sposób 2</p>
+
+<p>2. Ten pracownik to {{proffesion2}}, a jego umiejętności to {{skill2}}.</p>
+
+<label> Zawód </label>
+<input [(ngModel)]="proffesion2">
+<br> <br>
+<label> Umiejętności </label>
+<input [(ngModel)]="skill2">
+
+<br><br><br>
+<!-- _________________________________________________________________  -->
+<!-- lista zadań -->
+
+<h1 class="container">ZADANIA</h1>
+<div class="container">
+  <div>
+    <input [(ngModel)]="newTask">
+    <button (click)="add()">Dodaj</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <ng-container *ngIf="listazadan.length>0; else noTask">
+    <ul>
+      <li *ngFor="let task of listazadan">
+        <h5>{{task}}
+        <button (click)="usun(task)">Usuń</button>
+        <button (click)="zrobione(task)">Zrobione</button>
+      </h5>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-template #noTask>
+    <p>Brak zadań, masz czas wolny!</p>
+  </ng-template>
+
+
+
+  <ul>
+  <p>Wykonane zadania: {{listazrobionych.length}} </p>
+
+    <li *ngFor="let task of listazrobionych">
+      {{task}}
+    </li>
+  </ul>
+
+</div>
+
+<!-- _________________________________________________________________  -->
+
+<app-child [tasks]="tasksList"></app-child> <!-- inputy od dziecka dla app -->
