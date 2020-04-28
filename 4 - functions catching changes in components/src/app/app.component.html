@@ -1,0 +1,15 @@
+<!--    <app-child>      -->
+ <!-- <h5>Próba</h5>    -->
+<!--    </app-child>  -->
+<!--  ____________________________________________-->
+
+<div *ngIf="show">
+ <app-child [inputText]="title" [inputDog]="dog"></app-child>
+</div>
+
+<button (click)="changeTitle()">Zmień tytuł</button>
+<button (click)="changeDog()">Zmień psa</button>
+<button (click)="nothing()">Nic nie rób</button>
+<button (click)="destroy()">Usuń komponent</button>
+
+
