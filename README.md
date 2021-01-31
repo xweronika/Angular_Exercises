@@ -3,22 +3,22 @@ Angular exercises to learn.
 _______________________________________________________________
 
 
-![Alt text](http://dev-dev.pl/chmura/public/index.php/apps/files_sharing/ajax/publicpreview.php?x=1920&y=505&a=true&file=Angular1.png&t=V9Z3dqM07dAvBFL&scalingup=0)
+![Angular3](https://user-images.githubusercontent.com/44413511/106394155-73763580-63fb-11eb-8893-fa878dcb82e5.png)
 
 _______________________________________________________________
 
 
-![Alt text](http://dev-dev.pl/chmura/public/index.php/apps/files_sharing/ajax/publicpreview.php?x=1920&y=505&a=true&file=Angular2.png&t=OAKLgi5Tg45wPXn&scalingup=0)
+![Angular4](https://user-images.githubusercontent.com/44413511/106394163-7a9d4380-63fb-11eb-860e-ceaa1fd2ee18.png)
 
 _______________________________________________________________
 
 
-![Alt text](http://dev-dev.pl/chmura/public/index.php/apps/files_sharing/ajax/publicpreview.php?x=1920&y=505&a=true&file=Angular3.png&t=WGz6mgdTx63BSaT&scalingup=0)
+![Angular1](https://user-images.githubusercontent.com/44413511/106394167-7cff9d80-63fb-11eb-9e2a-62faef53ff44.png)
 
 _______________________________________________________________
 
 
-![Alt text](http://dev-dev.pl/chmura/public/index.php/apps/files_sharing/ajax/publicpreview.php?x=1920&y=505&a=true&file=Angular4.png&t=2dFJGwQ8phorp1s&scalingup=0)
+![Angular2](https://user-images.githubusercontent.com/44413511/106394170-7ffa8e00-63fb-11eb-8da5-fbcdd8c0ac95.png)
 
 _______________________________________________________________
 
